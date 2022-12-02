@@ -182,3 +182,11 @@ def show_path():
     filename = "用電統計資料"
     file_exist = os.path.isdir(filename)
     st.header(str(file_exist))
+
+    filename = "用電統計資料"
+    file_exist = os.path.exists(filename)
+    st.header(str(file_exist))
+
+    filename = "用電統計資料\\104.csv"
+    file_exist = os.path.exists(filename)
+    st.header(str(file_exist))

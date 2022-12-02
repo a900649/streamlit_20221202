@@ -14,6 +14,7 @@ st.markdown('---')
 page_names_to_funcs = {
     "用電戶數": electricity_statistics.show_用電戶數統計數據,
     "使用電量": electricity_statistics.show_使用電量,
+    "做暫存檔": electricity_statistics.reload_electricity_data,
 }
 
 uploaded_file = st.file_uploader(label="請上傳一個檔案",type=["xlsx","xls"])

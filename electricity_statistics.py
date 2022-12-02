@@ -179,6 +179,6 @@ def show_path():
     file_exist = os.path.isfile(filename)
     st.header(str(file_exist))
 
-    filename = os.getcwd() + "\\" + "用電統計資料"
+    filename = "用電統計資料"
     file_exist = os.path.isdir(filename)
     st.header(str(file_exist))

@@ -29,7 +29,6 @@ postal_code_dict = {"台北市":["100","103","104","105","106","108","110","110"
                     "連江縣":["209","210","211","212"]}
 
 def reload_electricity_data():
-    print(os.path)
     start_time = time.time()
     data_df = pd.DataFrame()
     for i in range(104, 112):
@@ -90,7 +89,6 @@ def reload_electricity_data():
 
 
 def show_用電戶數統計數據():
-    print(os.path)
     st.title('用電戶數統計數據')
     electricity_data_df = my_function.load_obj("用電統計暫存資料\\用電統計")
     city_list = ['台北市', '新北市', '桃園市', '台中市', '台南市', '高雄市', '新竹縣市']
@@ -130,7 +128,6 @@ def show_用電戶數統計數據():
     return None
 
 def show_使用電量():
-    print(os.path)
     st.title('使用電量統計數據')
     electricity_data_df = my_function.load_obj("用電統計暫存資料\\用電統計")
     city_list = ['台北市', '新北市', '桃園市', '台中市', '台南市', '高雄市', '新竹縣市']

@@ -187,6 +187,6 @@ def show_path():
     file_exist = os.path.exists(filename)
     st.header(str(file_exist))
 
-    filename = r"用電統計資料\\104.csv"
+    filename = r"用電統計資料/104.csv"
     file_exist = os.path.exists(filename)
     st.header(str(file_exist))

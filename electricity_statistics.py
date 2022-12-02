@@ -168,16 +168,6 @@ def show_使用電量():
 
 def show_path():
     st.title(os.path.dirname(os.path.abspath(__file__)))
-    st.header(" , ".join(os.listdir()))
-    st.header(" , ".join(os.listdir("用電統計資料")))
-
-    filename = os.path.dirname(os.path.abspath(__file__)) + "\\用電統計資料\\104.csv"
-    file_exist = os.path.isfile(filename)
-    st.header(str(file_exist))
-
-    filename = "用電統計資料\\104.csv"
-    file_exist = os.path.isfile(filename)
-    st.header(str(file_exist))
 
     filename = "用電統計資料"
     file_exist = os.path.isdir(filename)

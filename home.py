@@ -6,8 +6,17 @@ from astroquery.nasa_exoplanet_archive import NasaExoplanetArchive
 import time
 import numpy as np
 
-
 import electricity_statistics
+
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 st.title('Home')
 st.markdown('---')
 

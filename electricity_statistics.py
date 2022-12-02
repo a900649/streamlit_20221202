@@ -171,11 +171,11 @@ def show_path():
     st.header(" , ".join(os.listdir()))
     st.header(" , ".join(os.listdir("用電統計資料")))
 
-    filename = "/用電統計資料\\104.csv"
+    filename = os.path.dirname(os.path.abspath(__file__)) + "\\用電統計資料\\104.csv"
     file_exist = os.path.isfile(filename)
     st.header(str(file_exist))
 
-    filename = "用電統計暫存資料\\用電統計.pkl"
+    filename = "用電統計資料\\104.csv"
     file_exist = os.path.isfile(filename)
     st.header(str(file_exist))
 

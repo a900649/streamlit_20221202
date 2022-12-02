@@ -32,7 +32,7 @@ def reload_electricity_data():
     start_time = time.time()
     data_df = pd.DataFrame()
     for i in range(104, 112):
-        filename = "用電統計資料\\{}.csv".format(str(i))
+        filename = os.path.dirname(os.path.abspath(__file__)) + "\\" + "用電統計資料\\{}.csv".format(str(i))
         file_exist = os.path.isfile(filename)
         if file_exist == True:
             try:
@@ -90,7 +90,7 @@ def reload_electricity_data():
 
 def show_用電戶數統計數據():
     st.title('用電戶數統計數據')
-    electricity_data_df = my_function.load_obj("用電統計暫存資料\\用電統計")
+    electricity_data_df = my_function.load_obj(os.path.dirname(os.path.abspath(__file__)) + "\\" + "用電統計暫存資料\\用電統計")
     city_list = ['台北市', '新北市', '桃園市', '台中市', '台南市', '高雄市', '新竹縣市']
     use_type_list = ['表燈非營業用','表燈營業用','高壓電力']
 
@@ -129,7 +129,7 @@ def show_用電戶數統計數據():
 
 def show_使用電量():
     st.title('使用電量統計數據')
-    electricity_data_df = my_function.load_obj("用電統計暫存資料\\用電統計")
+    electricity_data_df = my_function.load_obj(os.path.dirname(os.path.abspath(__file__)) + "\\" + "用電統計暫存資料\\用電統計")
     city_list = ['台北市', '新北市', '桃園市', '台中市', '台南市', '高雄市', '新竹縣市']
     use_type_list = ['表燈非營業用','表燈營業用','高壓電力']
 

@@ -168,3 +168,4 @@ def show_使用電量():
 
 def show_path():
     st.title(os.path.dirname(os.path.abspath(__file__)))
+    st.header(" , ".join(os.listdir()))

@@ -165,3 +165,6 @@ def show_使用電量():
 
         st.plotly_chart(fig, use_container_width=True)
     return None
+
+def show_path():
+    st.title(os.path.dirname(os.path.abspath(__file__)))

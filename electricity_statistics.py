@@ -29,6 +29,7 @@ postal_code_dict = {"台北市":["100","103","104","105","106","108","110","110"
                     "連江縣":["209","210","211","212"]}
 
 def reload_electricity_data():
+    start_time = time.time()
     data_df = pd.DataFrame()
     for i in range(104, 112):
         filename = "用電統計資料\\{}.csv".format(str(i))
@@ -79,6 +80,11 @@ def reload_electricity_data():
                     results.append([year, month, use_type, date, area, number_of_households, use_electricity])
     results_df = pd.DataFrame(results, columns=["Year", "Month", "Type", "Date", "Area", "Number of Households", "Use Electricity"])
     my_function.save_obj(results_df,"用電統計暫存資料\\用電統計")
+
+    end_time = time.time()
+    spent_time = "{} s".format(round(end_time - start_time), 2)
+    st.title('暫存檔完成 ' + spent_time)
+
     return results_df
 
 
@@ -119,7 +125,7 @@ def show_用電戶數統計數據():
         fig.layout = layout
 
         st.plotly_chart(fig, use_container_width=True)
-
+    return None
 
 def show_使用電量():
     st.title('使用電量統計數據')
@@ -158,3 +164,4 @@ def show_使用電量():
         fig.layout = layout
 
         st.plotly_chart(fig, use_container_width=True)
+    return None
